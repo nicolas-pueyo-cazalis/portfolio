@@ -17,6 +17,7 @@ header {
     padding: 15px 0;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -36,11 +37,29 @@ nav a:hover {
     color: #60a5fa;
 }
 
+nav a.active {
+    color: #60a5fa;
+    border-bottom: 2px solid #60a5fa;
+    padding-bottom: 3px;
+}
+
 /* SECTIONS */
 section {
     padding: 70px 20px;
     max-width: 900px;
     margin: auto;
+}
+
+/* BLOCS PRINCIPAUX */
+#apropos,
+#competences,
+#experiences,
+#projets,
+#contact {
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 40px;
 }
 
 /* ACCUEIL */
@@ -49,7 +68,7 @@ section {
     background: white;
     border-radius: 10px;
     margin-top: 30px;
-    padding: 80px 20px;
+    padding: 30px 20px;
 }
 
 #accueil h1 {
@@ -60,9 +79,15 @@ section {
 #accueil h2 {
     font-weight: normal;
     color: #555;
+    margin-bottom: 15px;
 }
 
 /* COMPETENCES */
+#competences h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
 #competences ul {
     display: flex;
     gap: 15px;
@@ -77,14 +102,41 @@ section {
     border-radius: 20px;
 }
 
-/* PROJETS */
-#projets, #experiences, #apropos, #contact {
-    background: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    padding: 40px;
+/* EXPERIENCES */
+.experience {
+    margin-bottom: 40px;
 }
 
+.experience h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.infos {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background-color: #f3f4f6;
+    border-left: 4px solid #111827;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.highlight ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.highlight li {
+    margin-bottom: 8px;
+}
+
+/* PROJETS */
 .projets-container {
     display: flex;
     gap: 20px;
@@ -98,7 +150,7 @@ section {
     width: 250px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease;
 }
@@ -115,19 +167,6 @@ section {
     font-size: 14px;
     color: #555;
     margin-bottom: 15px;
-}
-
-.carte button {
-    padding: 8px 12px;
-    border: none;
-    background: #111827;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.carte button:hover {
-    background: #374151;
 }
 
 .carte a {
